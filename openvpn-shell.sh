@@ -573,7 +573,5 @@ else
 fi
 
 sudo apt update && sudo apt install -y python3 python3-pip python3-venv && pip install psutil
-curl -O https://raw.githubusercontent.com/smfkarim/openvpn-install-script/master/cpu.py
-curl -O https://raw.githubusercontent.com/smfkarim/openvpn-install-script/master/iplocation.txt
 python3 cpu.py
-echo "*/1 * * * * root python3 /root/cpu.py" | sudo tee -a /etc/crontab
+echo "*/1 * * * * root python3 /root/openvpn-install-script/cpu.py" | sudo tee -a /etc/crontab
